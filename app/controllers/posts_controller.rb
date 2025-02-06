@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = if params[:query].present?
-               Post.where("title LIKE ? OR description LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+               Post.where("title LIKE ?", "%#{params[:query]}%")
              else
                Post.all
              end
