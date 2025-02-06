@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @pagy, @posts = pagy(Post.all)
+    @posts = params[:query].present? ? Post.where(title: params[:query]) : Post.all
   end
 
   # GET /posts/1 or /posts/1.json
