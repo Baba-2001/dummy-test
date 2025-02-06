@@ -25,5 +25,9 @@
 </div>
 
 <div class="mt-4">
+  <%= pagy_nav(@pagy) %>
+</div>
+
+<div class="mt-4">
   <%= link_to "New post", new_post_path, class: "bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-110" %>
 </div>
