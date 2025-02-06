@@ -3,8 +3,8 @@
 <%= render @post %>
 
 <div>
-  <%= link_to "Edit this post", edit_post_path(@post), class: "hover:text-blue-600" %> |
-  <%= link_to "Back to posts", posts_path, class: "hover:text-blue-600" %>
+  <%= link_to "Edit this post", edit_post_path(@post), class: "hover:text-blue-600 transition duration-300 ease-in-out transform hover:scale-105" %> |
+  <%= link_to "Back to posts", posts_path, class: "hover:text-blue-600 transition duration-300 ease-in-out transform hover:scale-105" %>
 
-  <%= button_to "Destroy this post", @post, method: :delete, class: "hover:bg-red-600" %>
+  <%= button_to "Destroy this post", @post, method: :delete, class: "hover:bg-red-600 transition duration-300 ease-in-out transform hover:scale-105" %>
 </div>
