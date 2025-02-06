@@ -1,16 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<p class="text-green-500"><%= notice %></p>
 
 <% content_for :title, "Posts" %>
 
-<h1>Posts</h1>
+<h1 class="text-2xl font-bold mb-4">Posts</h1>
 
-<div id="posts">
+<div id="posts" class="space-y-4">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "SHOW THIS POST", post, class: "bg-red-300" %>
-    </p>
+    <div class="p-4 bg-white shadow rounded">
+      <%= render post %>
+      <p>
+        <%= link_to "SHOW THIS POST", post, class: "bg-red-300 text-white py-2 px-4 rounded" %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path, class: "bg-blue-500" %>
+<%= link_to "New post", new_post_path, class: "bg-blue-500 text-white py-2 px-4 rounded mt-4 inline-block" %>
