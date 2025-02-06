@@ -6,13 +6,15 @@
 
 <div id="posts" class="space-y-4">
   <% @posts.each do |post| %>
-    <div class="p-4 bg-white shadow rounded">
+    <div class="p-4 bg-white shadow rounded flex flex-col items-start">
       <%= render post %>
-      <p>
+      <p class="mt-2">
         <%= link_to "SHOW THIS POST", post, class: "bg-red-300 text-white py-2 px-4 rounded hover:bg-red-400" %>
       </p>
     </div>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path, class: "bg-blue-500 text-white py-2 px-4 rounded mt-4 inline-block hover:bg-blue-600" %>
+<div class="mt-4">
+  <%= link_to "New post", new_post_path, class: "bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600" %>
+</div>
