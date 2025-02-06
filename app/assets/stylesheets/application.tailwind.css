@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add custom animations */
+@keyframes buttonHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to all buttons and links */
+button, a {
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover, a:hover {
+  animation: buttonHover 0.3s forwards;
+}
