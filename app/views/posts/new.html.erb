@@ -1,11 +1,15 @@
 <% content_for :title, "New post" %>
 
-<h1>New post</h1>
+<div class="flex justify-center items-center">
+  <div class="w-full max-w-md">
+    <h1 class="text-center">New post</h1>
 
-<%= render "form", post: @post %>
+    <%= render "form", post: @post %>
 
-<br>
+    <br>
 
-<div>
-  <%= link_to "Back to posts", posts_path, class: "hover:text-blue-600 hover:text-green-600" %>
+    <div class="text-center">
+      <%= link_to "Back to posts", posts_path, class: "hover:text-blue-600 hover:text-green-600" %>
+    </div>
+  </div>
 </div>
