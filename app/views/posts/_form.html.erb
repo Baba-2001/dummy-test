@@ -4,7 +4,7 @@
       <h2 class="font-bold"><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul class="list-disc pl-5">
-        <% post.errors.each do |error| %>
+        <% post.errors.each do |error_obj| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -17,7 +17,7 @@
   </div>
 
   <div class="mt-4">
-    <%= form.label :description, "Description", class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= form.label :description, "Description", class: "block text-gray-700 text-sm font-bold mb-2"
     <%= form.text_area :description, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-110" %>
   </div>
 
